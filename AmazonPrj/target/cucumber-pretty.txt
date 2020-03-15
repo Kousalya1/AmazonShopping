@@ -1,0 +1,27 @@
+@Regression
+Feature: Amazon Shopping feauture
+
+  Background:                                         [90m# AmazonShopping.feature:4[0m
+    [32mGiven [0m[32mLaunch Amazon page and validate page header[0m [90m# AmazonShoppingSteps.launch_Amazon_page_and_validate_page_header()[0m
+
+  Scenario: Provice incorrect username and validate error   [90m# AmazonShopping.feature:7[0m
+    [32mWhen [0m[32mClick on login link and provide incorrect username[0m [90m# AmazonShoppingSteps.click_on_login_link_and_Provide_incorrect_username_and_validate_error()[0m
+    [32mThen [0m[32mValidate error for incorrect username[0m              [90m# AmazonShoppingSteps.validate_error_for_incorrect_username()[0m
+
+  Background:                                         [90m# AmazonShopping.feature:4[0m
+    [32mGiven [0m[32mLaunch Amazon page and validate page header[0m [90m# AmazonShoppingSteps.launch_Amazon_page_and_validate_page_header()[0m
+
+  Scenario: Provice incorrect password and validate error   [90m# AmazonShopping.feature:11[0m
+    [32mWhen [0m[32mClick on login link and provide incorrect password[0m [90m# AmazonShoppingSteps.provide_incorrect_password_and_validate_error()[0m
+    [32mThen [0m[32mValidate error for incorrect password[0m              [90m# AmazonShoppingSteps.validate_error_for_incorrect_password()[0m
+
+  Background:                                         [90m# AmazonShopping.feature:4[0m
+    [32mGiven [0m[32mLaunch Amazon page and validate page header[0m [90m# AmazonShoppingSteps.launch_Amazon_page_and_validate_page_header()[0m
+
+  Scenario: Login with valid credentials, add item and validate                        [90m# AmazonShopping.feature:15[0m
+    [32mWhen [0m[32mProvide correct username/password and validate home page header[0m               [90m# AmazonShoppingSteps.provide_correct_username_password_and_validate_home_page_header()[0m
+    [32mAnd [0m[32mSearch for "[0m[32m[1miphone x 64gb[0m[32m" and click on first product and move to product page[0m [90m# AmazonShoppingSteps.search_for_iphone_x_gb_and_click_on_first_product_and_move_to_product_page(String)[0m
+    [32mAnd [0m[32mCapture product name and price and add [0m[32m[1m1[0m[32m quantity to basket[0m                    [90m# AmazonShoppingSteps.capture_product_name_and_price_and_add_quantity_to_basket(int)[0m
+    [32mAnd [0m[32mValidate product is added into basket on product page[0m                          [90m# AmazonShoppingSteps.validate_product_is_added_into_basket_on_product_page()[0m
+    [32mAnd [0m[32mVaidate product price and name on basket page[0m                                  [90m# AmazonShoppingSteps.vaidate_product_price_and_name_on_basket_page()[0m
+    [32mAnd [0m[32mLogout and login again validate product in basket is present or not[0m            [90m# AmazonShoppingSteps.logout_and_login_again_validate_product_in_basket_is_present_or_not()[0m
